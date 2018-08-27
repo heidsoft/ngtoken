@@ -46,3 +46,6 @@
 2018-08-21 15:41:28.579  INFO 3742 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
 2018-08-21 15:41:28.581  INFO 3742 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
 2018-08-21 15:41:28.637  INFO 3742 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 54 ms
+2018-08-21 16:38:24.532  INFO 3742 --- [Thread-53] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9353778: startup date [Tue Aug 21 15:16:54 CST 2018]; root of context hierarchy
+2018-08-21 16:38:24.604  INFO 3742 --- [Thread-53] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2018-08-21 16:38:24.748  INFO 3742 --- [Thread-53] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
