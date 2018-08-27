@@ -1,4 +1,4 @@
-package cn.ngtoken.ngtoken;
+package test.java.cn.ngtoken.ngtoken;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
