@@ -1,15 +1,14 @@
-package main.java.cn.ngtoken.gateway;
+package cn.ngtoken.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
-@SpringBootApplication
-@EnableZuulProxy
+
 
 /**
  * @author heidsoft
  */
+@SpringBootApplication
 public class NgTokenApplication {
 
 	public static void main(String[] args) {

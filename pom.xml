@@ -9,24 +9,15 @@
 	<modules>
 		<module>ngtoken-gateway</module>
 		<module>ngtoken-sofa</module>
+        <module>ngtoken-flow</module>
+		<module>ngtoken-service-registry</module>
 	</modules>
 	<packaging>pom</packaging>
 
 	<name>ngtoken</name>
 	<description>ngtoken </description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
 
-	<!--<parent>-->
-		<!--<groupId>com.alipay.sofa</groupId>-->
-		<!--<artifactId>sofaboot-dependencies</artifactId>-->
-		<!--<version>2.4.4</version>-->
-	<!--</parent>-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
