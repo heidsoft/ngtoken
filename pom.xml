@@ -11,7 +11,8 @@
 		<module>ngtoken-sofa</module>
         <module>ngtoken-flow</module>
 		<module>ngtoken-service-registry</module>
-	</modules>
+        <module>ngtoken-web3j</module>
+    </modules>
 	<packaging>pom</packaging>
 
 	<name>ngtoken</name>
