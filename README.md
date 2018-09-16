@@ -5,6 +5,9 @@ ngtoken 是面向企业的 旨在一个企业级区块链管理项目
 ## 区块链中间件
 ```
 (udap)[https://github.com/udap/udap.github.io/blob/master/whitepapers/UDAP-Whitepaper-Chinese.md]
+
+通证经济的模型与实践
+https://mp.weixin.qq.com/s/YOvsbzLgxWBGRLFpCBZNtQ
 ```
 
 ## 什么通证
