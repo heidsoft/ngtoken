@@ -2,6 +2,11 @@
 
 ngtoken 是面向企业的 旨在一个企业级区块链管理项目
 
+## 区块链中间件
+```
+(udap)[https://github.com/udap/udap.github.io/blob/master/whitepapers/UDAP-Whitepaper-Chinese.md]
+```
+
 ## 什么通证
 ```
 实际上，货币即权力，货币即政治，货币权力必须属于国家。所以 token 代什么都容易，就是代货币难，没有国家的授权和支持，所谓“代币”只是自欺欺人。而 token 是实实在在的，今天就可以用起来。所以我们需要 token 的一个更合理的译法。
