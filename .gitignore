@@ -23,3 +23,7 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/ngtoken-sofa/target
+/ngtoken-kafka/target
+/ngtoken-flow/target
+/ngtoken-gateway/target

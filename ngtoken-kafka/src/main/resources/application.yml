@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+
+app:
+  topic:
+    foo: dev_msg
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.web: ERROR
+    cn.ngtoken.kafka: DEBUG
