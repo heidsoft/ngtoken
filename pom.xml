@@ -19,6 +19,7 @@
 		<!--<module>ngtoken-service-registry</module>-->
         <!--<module>ngtoken-web3j</module>-->
 		<module>ngtoken-kafka</module>
+		<!--<module>ngtoken-redis</module>-->
 	</modules>
 	<packaging>pom</packaging>
 

@@ -1,0 +1,12 @@
+spring:
+  cache:
+    type: redis
+  redis:
+    port: 6379
+    host: localhost
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: ERROR
+    cn.ngtoken.redis: DEBUG
