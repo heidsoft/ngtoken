@@ -18,8 +18,9 @@
         <!--<module>ngtoken-flow</module>-->
 		<!--<module>ngtoken-service-registry</module>-->
         <!--<module>ngtoken-web3j</module>-->
-		<module>ngtoken-kafka</module>
+		<!--<module>ngtoken-kafka</module>-->
 		<!--<module>ngtoken-redis</module>-->
+		<module>ngtoken-kong</module>
 	</modules>
 	<packaging>pom</packaging>
 
