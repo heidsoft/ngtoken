@@ -21,6 +21,7 @@
 		<!--<module>ngtoken-kafka</module>-->
 		<!--<module>ngtoken-redis</module>-->
 		<module>ngtoken-kong</module>
+		<module>ngtoken-logs</module>
 	</modules>
 	<packaging>pom</packaging>
 
