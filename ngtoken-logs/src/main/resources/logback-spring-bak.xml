@@ -6,8 +6,9 @@
     <appender name="Console"
               class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- 以绿色显示行号 %green(%logger{50}:%line) -->
             <Pattern>
-                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}) %green(%logger{50}:%line) %msg%n%throwable
+                %black(%d{ISO8601}) %highlight(%-5level) [%X{uniqueTrackingNumber}] [%blue(%t)] %yellow(%C{1.})  %msg%n%throwable
             </Pattern>
         </layout>
     </appender>
@@ -39,7 +40,7 @@
     </root>
 
     <!-- LOG "com.baeldung*" at TRACE level -->
-    <logger name="com.baeldung" level="trace" additivity="false">
+    <logger name="cn.ngtoken" level="trace" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>

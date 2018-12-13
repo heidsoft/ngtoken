@@ -1,3 +1,0 @@
-2018-08-21 15:16:44,263 INFO  main                             - SOFABoot Infrastructure Starting!
-2018-08-21 15:41:28,696 INFO  http-nio-8080-exec-2             - Loading properties file from URL [jar:file:/Users/heidsoft/.m2/repository/com/alipay/sofa/healthcheck-sofa-boot-starter/2.4.4/healthcheck-sofa-boot-starter-2.4.4.jar!/META-INF/sofa.versions.properties]
-2018-08-21 15:41:28,699 INFO  http-nio-8080-exec-2             - Loading properties file from URL [jar:file:/Users/heidsoft/.m2/repository/com/alipay/sofa/infra-sofa-boot-starter/2.4.4/infra-sofa-boot-starter-2.4.4.jar!/META-INF/sofa.versions.properties]

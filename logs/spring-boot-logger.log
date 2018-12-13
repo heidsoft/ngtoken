@@ -1,207 +1,166 @@
-2018-12-12 16:18:01,523 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 19750 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 16:18:01,532 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 16:18:03,634 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2018-12-12 16:18:03,648 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2018-12-12 16:18:03,658 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 16:18:03,658 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 16:18:03,666 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 16:18:03,758 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 16:18:03,759 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1985 ms
-2018-12-12 16:18:04,059 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 16:18:04,219 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2018-12-12 16:18:04,237 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 16:18:04,240 ERROR org.apache.juli.logging.DirectJDKLog [main] Failed to start component [Connector[HTTP/1.1-8080]]
-org.apache.catalina.LifecycleException: Protocol handler start failed
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1001)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at cn.ngtoken.logs.NgtokenLogsApplication.main(NgtokenLogsApplication.java:10)
-Caused by: java.net.BindException: Address already in use
-	at sun.nio.ch.Net.bind0(Native Method)
-	at sun.nio.ch.Net.bind(Net.java:433)
-	at sun.nio.ch.Net.bind(Net.java:425)
-	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
-	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
-	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
-	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
-	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1067)
-	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1149)
-	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:561)
-	at org.apache.catalina.connector.Connector.startInternal(Connector.java:998)
-	... 14 common frames omitted
-2018-12-12 16:18:04,247 INFO org.apache.juli.logging.DirectJDKLog [main] Pausing ProtocolHandler ["http-nio-8080"]
-2018-12-12 16:18:04,248 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
-2018-12-12 16:18:04,257 INFO org.apache.juli.logging.DirectJDKLog [main] The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
-2018-12-12 16:18:04,257 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping ProtocolHandler ["http-nio-8080"]
-2018-12-12 16:18:04,257 INFO org.apache.juli.logging.DirectJDKLog [main] Destroying ProtocolHandler ["http-nio-8080"]
-2018-12-12 16:18:04,260 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2018-12-12 16:18:04,264 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
-
-Action:
-
-Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
-
-2018-12-12 16:18:04,268 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 16:19:39,934 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 19784 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 16:19:39,939 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 16:19:42,364 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 16:19:42,400 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 16:19:42,415 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 16:19:42,415 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 16:19:42,423 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 16:19:42,524 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 16:19:42,525 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2285 ms
-2018-12-12 16:19:42,890 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 16:19:43,145 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 16:19:43,166 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 16:19:43,181 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 16:19:43,187 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 4.575 seconds (JVM running for 6.904)
-2018-12-12 16:35:06,514 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2018-12-12 16:35:06,517 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18081-exec-1] Initializing Servlet 'dispatcherServlet'
-2018-12-12 16:35:06,543 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18081-exec-1] Completed initialization in 25 ms
-2018-12-12 16:35:30,510 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-14] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 16:35:41,908 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 19918 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 16:35:41,913 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 16:35:44,224 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 16:35:44,254 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 16:35:44,269 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 16:35:44,269 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 16:35:44,278 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 16:35:44,376 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 16:35:44,377 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2333 ms
-2018-12-12 16:35:44,717 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 16:35:44,968 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 16:35:44,988 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 16:35:45,003 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 16:35:45,008 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 4.145 seconds (JVM running for 6.201)
-2018-12-12 16:37:16,874 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2018-12-12 16:37:16,875 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18081-exec-1] Initializing Servlet 'dispatcherServlet'
-2018-12-12 16:37:16,883 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18081-exec-1] Completed initialization in 8 ms
-2018-12-12 16:37:16,902 INFO cn.ngtoken.logs.controller.LogController [http-nio-18081-exec-1] An INFO Message
-2018-12-12 16:37:16,902 WARN cn.ngtoken.logs.controller.LogController [http-nio-18081-exec-1] A WARN Message
-2018-12-12 16:37:16,903 ERROR cn.ngtoken.logs.controller.LogController [http-nio-18081-exec-1] An ERROR Message
-2018-12-12 17:29:48,346 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20402 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:29:48,355 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:29:51,029 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:29:51,050 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:29:51,081 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:29:51,081 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:29:51,090 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:29:51,387 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:29:51,388 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2688 ms
-2018-12-12 17:29:51,753 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:29:51,971 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:29:52,003 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:29:52,019 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:29:52,025 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 4.78 seconds (JVM running for 6.464)
-2018-12-12 17:30:30,141 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-13] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:30:36,545 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20416 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:30:36,549 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:30:38,949 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:30:38,961 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:30:38,973 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:30:38,973 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:30:38,982 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:30:39,089 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:30:39,090 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2374 ms
-2018-12-12 17:30:39,546 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:30:39,864 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:30:39,897 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:30:39,913 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:30:39,918 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 4.296 seconds (JVM running for 5.674)
-2018-12-12 17:32:12,943 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-12] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:32:20,856 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20440 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:32:20,872 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:32:22,716 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:32:22,729 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:32:22,741 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:32:22,741 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:32:22,755 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:32:22,847 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:32:22,847 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1744 ms
-2018-12-12 17:32:23,147 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:32:23,360 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:32:23,402 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:32:23,416 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:32:23,424 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 3.471 seconds (JVM running for 5.04)
-2018-12-12 17:32:45,996 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-10] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:33:00,540 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20455 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:33:00,549 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:33:02,517 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:33:02,541 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:33:02,552 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:33:02,553 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:33:02,562 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:33:02,661 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:33:02,662 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1967 ms
-2018-12-12 17:33:02,954 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:33:03,169 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:33:03,194 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:33:03,209 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:33:03,213 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 3.401 seconds (JVM running for 4.645)
-2018-12-12 17:47:01,646 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-10] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:47:13,292 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20739 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:47:13,309 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:47:17,157 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:47:17,173 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:47:17,188 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:47:17,189 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:47:17,197 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:47:17,355 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:47:17,355 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3882 ms
-2018-12-12 17:47:17,706 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:47:18,240 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:47:18,284 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:47:18,313 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:47:18,319 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 6.643 seconds (JVM running for 9.126)
-2018-12-12 17:49:50,135 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-17] Shutting down ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:49:59,518 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 20768 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 17:49:59,554 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 17:50:02,449 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 17:50:02,464 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:50:02,475 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 17:50:02,476 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 17:50:02,484 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 17:50:02,597 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 17:50:02,598 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2700 ms
-2018-12-12 17:50:03,190 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 17:50:03,630 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 17:50:03,660 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 17:50:03,701 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 17:50:03,716 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 5.724 seconds (JVM running for 7.536)
-2018-12-12 19:43:56,751 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 21651 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
-2018-12-12 19:43:56,810 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2018-12-12 19:43:59,208 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18081 (http)
-2018-12-12 19:43:59,227 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18081"]
-2018-12-12 19:43:59,245 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
-2018-12-12 19:43:59,245 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
-2018-12-12 19:43:59,254 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2018-12-12 19:43:59,522 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2018-12-12 19:43:59,524 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2409 ms
-2018-12-12 19:43:59,919 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
-2018-12-12 19:44:00,150 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18081"]
-2018-12-12 19:44:00,168 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
-2018-12-12 19:44:00,193 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18081 (http) with context path ''
-2018-12-12 19:44:00,199 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 4.942 seconds (JVM running for 7.201)
-2018-12-12 19:54:23,208 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-14] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:00:16,663 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1251 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:00:16,668 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:00:19,048 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:00:19,098 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:00:19,146 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:00:19,146 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:00:19,159 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:00:19,375 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:00:19,377 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2641 ms
+2018-12-13 12:00:20,018 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:00:20,175 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:00:20,193 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:00:20,208 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:00:20,212 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 24.3 seconds (JVM running for 30.326)
+2018-12-13 12:00:30,653 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-51] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:01:19,277 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1287 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:01:19,282 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:01:22,002 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:01:22,023 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:01:22,046 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:01:22,047 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:01:22,065 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:01:22,216 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:01:22,223 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2708 ms
+2018-12-13 12:01:22,645 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:01:23,348 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:01:23,379 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:01:23,415 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:01:23,438 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 24.803 seconds (JVM running for 30.755)
+2018-12-13 12:01:36,268 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 12:01:36,272 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 12:01:36,401 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 106 ms
+2018-12-13 12:02:43,093 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-51] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:03:23,516 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1313 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:03:23,527 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:03:27,658 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:03:27,682 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:03:27,697 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:03:27,697 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:03:27,707 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:03:27,826 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:03:27,827 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4145 ms
+2018-12-13 12:03:28,312 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:03:28,523 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:03:28,549 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:03:28,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:03:28,574 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 27.472 seconds (JVM running for 36.397)
+2018-12-13 12:04:07,588 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-59] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:04:39,733 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1328 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:04:39,738 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:04:40,710 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:04:40,722 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:04:40,731 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:04:40,731 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:04:40,737 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:04:40,825 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:04:40,826 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1034 ms
+2018-12-13 12:04:41,079 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:04:41,225 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:04:41,241 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:04:41,258 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:04:41,266 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 22.024 seconds (JVM running for 28.114)
+2018-12-13 12:04:46,877 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 12:04:46,879 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 12:04:46,886 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 7 ms
+2018-12-13 12:08:15,611 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-47] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:08:47,010 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1349 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:08:47,015 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2018-12-13 12:08:47,019 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:08:49,021 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:08:49,050 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:08:49,070 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:08:49,071 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:08:49,078 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:08:49,276 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:08:49,277 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2184 ms
+2018-12-13 12:08:49,356 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'uniqueTrackingNumberFilter' configured for use
+2018-12-13 12:08:49,909 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:08:50,073 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:08:50,091 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:08:50,112 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:08:50,121 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 23.78 seconds (JVM running for 30.14)
+2018-12-13 12:08:56,922 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 12:08:56,924 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 12:08:56,933 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 9 ms
+2018-12-13 12:10:40,816 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-50] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:11:36,370 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1383 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 12:11:36,379 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2018-12-13 12:11:36,380 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 12:11:38,147 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 12:11:38,170 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:11:38,183 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 12:11:38,184 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 12:11:38,195 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 12:11:38,323 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 12:11:38,324 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1882 ms
+2018-12-13 12:11:38,517 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'uniqueTrackingNumberFilter' configured for use
+2018-12-13 12:11:38,887 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 12:11:39,194 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 12:11:39,225 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 12:11:39,262 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 12:11:39,285 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 24.184 seconds (JVM running for 33.721)
+2018-12-13 12:12:12,788 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 12:12:12,791 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 12:12:12,807 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 15 ms
+2018-12-13 13:05:36,505 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-51] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:06:37,199 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1448 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 13:06:37,206 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2018-12-13 13:06:37,211 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 13:06:39,405 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 13:06:39,424 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:06:39,439 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 13:06:39,440 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 13:06:39,449 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 13:06:39,585 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 13:06:39,586 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2246 ms
+2018-12-13 13:06:39,738 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'uniqueTrackingNumberFilter' configured for use
+2018-12-13 13:06:39,941 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:06:40,183 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:06:40,208 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 13:06:40,234 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 13:06:40,240 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 23.969 seconds (JVM running for 30.446)
+2018-12-13 13:06:47,071 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 13:06:47,073 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 13:06:47,083 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 10 ms
+2018-12-13 13:07:28,725 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-50] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:08:01,922 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1483 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 13:08:01,926 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2018-12-13 13:08:01,928 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 13:08:03,615 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 13:08:03,627 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:08:03,643 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 13:08:03,643 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 13:08:03,650 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 13:08:03,723 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 13:08:03,724 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1713 ms
+2018-12-13 13:08:03,776 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'uniqueTrackingNumberFilter' configured for use
+2018-12-13 13:08:04,093 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:08:04,378 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:08:04,395 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 13:08:04,411 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 13:08:04,415 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 23.166 seconds (JVM running for 29.18)
+2018-12-13 13:08:13,838 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 13:08:13,840 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 13:08:13,846 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 6 ms
+2018-12-13 13:09:14,129 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-49] Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:13:18,408 INFO org.springframework.boot.StartupInfoLogger [main] Starting NgtokenLogsApplication on heidsoftdeMacBook-Pro.local with PID 1650 (/Users/heidsoft/research/ngtoken/ngtoken-logs/target/classes started by heidsoft in /Users/heidsoft/research/ngtoken)
+2018-12-13 13:13:18,412 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2018-12-13 13:13:18,414 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-12-13 13:13:19,591 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 18082 (http)
+2018-12-13 13:13:19,604 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:13:19,617 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2018-12-13 13:13:19,617 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/9.0.13
+2018-12-13 13:13:19,628 INFO org.apache.juli.logging.DirectJDKLog [main] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/heidsoft/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-13 13:13:19,713 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2018-12-13 13:13:19,714 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1261 ms
+2018-12-13 13:13:19,763 DEBUG org.springframework.web.filter.GenericFilterBean [main] Filter 'uniqueTrackingNumberFilter' configured for use
+2018-12-13 13:13:20,024 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-13 13:13:20,197 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-18082"]
+2018-12-13 13:13:20,211 INFO org.apache.juli.logging.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-12-13 13:13:20,225 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 18082 (http) with context path ''
+2018-12-13 13:13:20,229 INFO org.springframework.boot.StartupInfoLogger [main] Started NgtokenLogsApplication in 22.366 seconds (JVM running for 28.223)
+2018-12-13 13:13:31,354 INFO org.apache.juli.logging.DirectJDKLog [http-nio-18082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-13 13:13:31,355 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Initializing Servlet 'dispatcherServlet'
+2018-12-13 13:13:31,362 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-18082-exec-1] Completed initialization in 7 ms
+2018-12-13 13:15:09,494 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-47] Shutting down ExecutorService 'applicationTaskExecutor'
