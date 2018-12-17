@@ -25,8 +25,8 @@ public class LogInterceptor implements HandlerInterceptor {
         String xForwardedForHeader = httpServletRequest.getHeader("X-Forwarded-For");
         String remoteIp = httpServletRequest.getRemoteAddr();
         String uuid = UUID.randomUUID().toString();
-        LOGGER.info("put requestId ({}) to logger", uuid);
-        LOGGER.info("request id:{}, client ip:{}, X-Forwarded-For:{}", uuid, remoteIp, xForwardedForHeader);
+        //LOGGER.info("put requestId ({}) to logger", uuid);
+        //LOGGER.info("request id:{}, client ip:{}, X-Forwarded-For:{}", uuid, remoteIp, xForwardedForHeader);
         MDC.put(REQUEST_ID, uuid);
         return true;
     }
@@ -34,7 +34,7 @@ public class LogInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
         String uuid = MDC.get(REQUEST_ID);
-        LOGGER.info("remove requestId ({}) from logger", uuid);
+        //LOGGER.info("remove requestId ({}) from logger", uuid);
         MDC.remove(REQUEST_ID);
     }
  

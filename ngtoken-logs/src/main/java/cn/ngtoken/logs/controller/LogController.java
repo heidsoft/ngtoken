@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class LogController {
     Logger logger = LoggerFactory.getLogger(LogController.class);
 
-    @RequestMapping("/log")
+    private volatile int count = 0;
+
+    @GetMapping("/log")
     public String logMessage(){
         logger.trace("A TRACE Message");
         logger.debug("A DEBUG Message");
@@ -28,9 +30,23 @@ public class LogController {
         return "log controller";
     }
 
-    @RequestMapping("/index")
+    @GetMapping("/index")
     public String index(){
-        System.out.println("index ...");
+        logger.info("start count {}",count);
+        synchronized (this){
+            count++;
+        }
+        logger.info("end count {}",count);
         return "hello";
     }
+
+    @GetMapping("/index2")
+    public String index2(){
+        logger.info("start count {}",count);
+        count++;
+        logger.info("end count {}",count);
+        return "hello";
+    }
+
+
 }
