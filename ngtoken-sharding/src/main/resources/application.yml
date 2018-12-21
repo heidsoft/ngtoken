@@ -1,0 +1,58 @@
+server:
+  port: 10086
+
+sharding:
+  jdbc:
+    datasource:
+      names: ds_master_0,ds_slave_0_1,ds_slave_0_2
+      ds_master_0:
+        type: org.apache.commons.dbcp.BasicDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.01:3306/ds_master?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: 1qaz@WSX
+      ds_slave_0_1:
+        type: org.apache.commons.dbcp.BasicDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.01:3306/ds_slave_0?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: 1qaz@WSX
+      ds_slave_0_2:
+        type: org.apache.commons.dbcp.BasicDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.01:3306/ds_slave_1?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+        username: root
+        password: 1qaz@WSX
+    config:
+      # 主从策略
+      masterslave:
+        load-balance-algorithm-type: round_robin # 负载策略
+        name: ds_m_1_s_2
+        master-data-source-name: ds_master_0
+        slave-data-source-names: ds_slave_0_1,ds_slave_0_2
+      sharding:
+        props:
+          sql:
+            show: true
+
+#mybatis
+mybatis-plus:
+  datasource: dataSource
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: cn.ngtoken.sharding.entity
+  global-config:
+    #主键类型  0:"数据库ID自增", 1:"用户输入ID",2:"全局唯一ID (数字类型唯一ID)", 3:"全局唯一ID UUID";
+    id-type: 0
+    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+    field-strategy: 2
+    #驼峰下划线转换
+    db-column-underline: true
+    #刷新mapper 调试神器
+    refresh-mapper: true
+    #逻辑删除配置
+    logic-delete-value: 0
+    logic-not-delete-value: 1
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
