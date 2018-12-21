@@ -1,6 +1,10 @@
 syntax = "proto3";
+
 package cn.ngtoken.grpc.service;
-option java_outer_classname = "UserServiceImpl";
+
+option java_multiple_files = true;
+option java_outer_classname = "UserServiceProto";
+//option objc_class_prefix = "HLW";
 
 message UserRequest {
     string name = 1 ;
