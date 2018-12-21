@@ -23,6 +23,7 @@
 		<module>ngtoken-redis2</module>
 		<module>ngtoken-kong</module>
 		<module>ngtoken-logs</module>
+		<module>ngtoken-grpc</module>
 	</modules>
 	<packaging>pom</packaging>
 

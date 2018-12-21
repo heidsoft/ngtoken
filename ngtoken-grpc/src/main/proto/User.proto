@@ -1,0 +1,16 @@
+syntax = "proto3";
+package cn.ngtoken.grpc.service;
+option java_outer_classname = "UserServiceImpl";
+
+message UserRequest {
+    string name = 1 ;
+    int32  age  = 2 ;
+}
+message UserResponse {
+    string message = 1 ;
+}
+
+
+service UserService{
+    rpc listUser (UserRequest) returns (UserResponse) {}
+}
