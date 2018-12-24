@@ -5,6 +5,10 @@ import cn.ngtoken.cache.service.CustomerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationEvent;
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.http.HttpStatus;
@@ -19,7 +23,7 @@ import java.util.List;
  * @create: 2018-12-14 16:55
  **/
 @RestController
-public class CacheController {
+public class CacheController implements EnvironmentAware, ApplicationEventPublisher {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(CacheController.class);
 
@@ -55,4 +59,20 @@ public class CacheController {
         return customerService.findCustomerById(id);
     }
 
+    private Environment environment = null;
+
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
+    }
+
+    @Override
+    public void publishEvent(ApplicationEvent event) {
+        System.out.println("envent....111");
+    }
+
+    @Override
+    public void publishEvent(Object event) {
+        System.out.println("envent....222");
+    }
 }

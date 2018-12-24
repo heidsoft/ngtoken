@@ -49,12 +49,12 @@ public class RedisConfig{
 //        return redisTemplate;
 //    }
 
-    @Bean
-    public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFactory, ResourceLoader resourceLoader) {
-        RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager
-                .builder(redisConnectionFactory);
-        return builder.build();
-    }
+//    @Bean
+//    public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFactory, ResourceLoader resourceLoader) {
+//        RedisCacheManager.RedisCacheManagerBuilder builder = RedisCacheManager
+//                .builder(redisConnectionFactory);
+//        return builder.build();
+//    }
 
 
 
