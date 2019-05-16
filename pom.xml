@@ -13,22 +13,22 @@
 	<artifactId>ngtoken</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
-		<!--<module>ngtoken-gateway</module>-->
-		<!--<module>ngtoken-sofa</module>-->
-        <!--<module>ngtoken-flow</module>-->
-		<!--<module>ngtoken-service-registry</module>-->
-        <!--<module>ngtoken-web3j</module>-->
-		<!--<module>ngtoken-kafka</module>-->
+		<module>ngtoken-gateway</module>
+		<module>ngtoken-service-registry</module>
+		<module>ngtoken-kafka</module>
         <module>ngtoken-cache</module>
 		<module>ngtoken-redis2</module>
 		<module>ngtoken-kong</module>
 		<module>ngtoken-logs</module>
 		<module>ngtoken-grpc</module>
+        <module>ngtoken-dubbo-interface</module>
+		<module>ngtoken-dubbo-provider</module>
+		<module>ngtoken-dubbo-comsumer</module>
 	</modules>
 	<packaging>pom</packaging>
 
 	<name>ngtoken</name>
-	<description>ngtoken </description>
+	<description>ngtoken</description>
 
 
 
