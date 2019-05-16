@@ -18,6 +18,7 @@
         <dubbo.version>2.6.6</dubbo.version>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -39,7 +40,7 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.36.Final</version>
+            <version>4.1.32.Final</version>
         </dependency>
     </dependencies>
 
