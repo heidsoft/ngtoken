@@ -24,6 +24,10 @@
         <module>ngtoken-dubbo-interface</module>
 		<module>ngtoken-dubbo-provider</module>
 		<module>ngtoken-dubbo-comsumer</module>
+		<module>ngtoken-dubbo-comsumer-zk</module>
+		<module>ngtoken-dubbo-interface-zk</module>
+		<module>ngtoken-dubbo-provider-zk</module>
+		<module>ngtoken-consul</module>
 	</modules>
 	<packaging>pom</packaging>
 
